@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palmier — Assistance</title>
+<meta name="description" content="Palmier, le jeu à boire entre potes : assistance et questions fréquentes.">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<script>
+  (function () {
+    var q = location.search.match(/[?&]lang=(fr|en)/), l = q ? q[1] : null;
+    if (!l) { try { l = localStorage.getItem("lang"); } catch (e) {} }
+    if (!l) l = (navigator.language || "fr").toLowerCase().indexOf("fr") === 0 ? "fr" : "en";
+    document.documentElement.className = "js show-" + l;
+    document.documentElement.lang = l;
+    window.setLang = function (x) {
+      try { localStorage.setItem("lang", x); } catch (e) {}
+      document.documentElement.className = "js show-" + x;
+      document.documentElement.lang = x;
+      return false;
+    };
+  })();
+</script>
+</head>
+<body>
+<main>
+  <div class="top">
+    <nav class="langs">
+      <a href="?lang=fr" onclick="return setLang('fr')" id="l-fr">FR</a><a href="?lang=en" onclick="return setLang('en')" id="l-en">EN</a>
+    </nav>
+  </div>
+
+  <header class="hero">
+    <img src="icon.png" alt="Palmier">
+    <h1>Palmier</h1>
+    <p class="tagline" lang="fr">Le jeu à boire entre potes 🌴</p>
+    <p class="tagline" lang="en">The drinking card game for your crew 🌴</p>
+  </header>
+
+  <section lang="fr">
+    <div class="card contact">
+      <h3>Assistance</h3>
+      <p>Une question, un souci, une idée de défi&nbsp;? Écris-nous, on répond en français ou en anglais.</p>
+      <a class="btn" href="mailto:thomasmuller2@gmail.com">thomasmuller2@gmail.com</a>
+    </div>
+
+    <h2>Questions fréquentes</h2>
+    <div class="card">
+      <h3>Comment on joue&nbsp;?</h3>
+      <p>Pose le téléphone au milieu de la bande. Chacun son tour, touche une carte du palmier ou tire-la vers toi, puis fais le défi. L'explication des mini-jeux est écrite sur la carte, et la dernière carte reste affichée en bas de l'écran.</p>
+    </div>
+    <div class="card">
+      <h3>C'est quoi le rituel des As&nbsp;?</h3>
+      <p>Les quatre As préparent le cocktail du groupe&nbsp;: le premier choisit l'endroit, le deuxième le récipient, le troisième l'alcool… et le quatrième le boit.</p>
+    </div>
+    <div class="card">
+      <h3>Comment créer mes propres défis&nbsp;?</h3>
+      <p>Depuis l'accueil, ouvre «&nbsp;Éditer mes cartes&nbsp;», choisis une carte et écris ton défi. Lance ensuite l'ambiance «&nbsp;Mes cartes&nbsp;». Les cartes laissées vides reprennent les défis du Before.</p>
+    </div>
+    <div class="card">
+      <h3>Où sont enregistrés mes défis et ma partie&nbsp;?</h3>
+      <p>Sur ton iPhone, et dans ses sauvegardes iCloud ou ordinateur si tu les as activées. Le jeu n'a pas de compte en ligne&nbsp;: si tu supprimes l'app, tes défis personnalisés sont effacés.</p>
+    </div>
+
+    <p class="warning">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.<br>Ne prends jamais le volant après avoir bu.</p>
+  </section>
+
+  <section lang="en">
+    <div class="card contact">
+      <h3>Support</h3>
+      <p>A question, a problem, an idea for a challenge? Write to us, we answer in French or English.</p>
+      <a class="btn" href="mailto:thomasmuller2@gmail.com">thomasmuller2@gmail.com</a>
+    </div>
+
+    <h2>FAQ</h2>
+    <div class="card">
+      <h3>How do you play?</h3>
+      <p>Put the phone in the middle of the group. Taking turns, tap a card in the palm tree or pull it towards you, then do the challenge. Mini-game rules are written on the card, and the last card stays on screen.</p>
+    </div>
+    <div class="card">
+      <h3>What is the Aces ritual?</h3>
+      <p>The four Aces make the group's cocktail: the first picks the place, the second the glass, the third the alcohol… and the fourth drinks it.</p>
+    </div>
+    <div class="card">
+      <h3>How do I write my own challenges?</h3>
+      <p>From the home screen, open "Éditer mes cartes", pick a card and write your challenge. Then start the "Mes cartes" mode. Blank cards fall back to the Before challenges.</p>
+    </div>
+    <div class="card">
+      <h3>Where are my challenges and my game stored?</h3>
+      <p>On your iPhone, and in its iCloud or computer backups if you use them. The game has no online account: deleting the app erases your custom challenges.</p>
+    </div>
+
+    <p class="warning">Drink responsibly. Never drink and drive.</p>
+  </section>
+
+  <footer>
+    <a href="confidentialite.html" lang="fr">Confidentialité</a>
+    <a href="confidentialite.html?lang=en" lang="en">Privacy</a>
+    <p>© 2026 Thomas Muller</p>
+  </footer>
+</main>
+</body>
+</html>
